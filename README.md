@@ -1,1 +1,13 @@
-# aegle (WIP)
+# Aegle (WIP)
+
+
+# Skills and Tools
+
+
+# Problem
+
+
+# Solution
+
+
+# Method
