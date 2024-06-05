@@ -2,6 +2,8 @@
 
 
 # Skills and Tools
+- Java
+- Firebase
 
 
 # Problem
