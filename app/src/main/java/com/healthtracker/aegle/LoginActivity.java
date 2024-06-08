@@ -22,6 +22,13 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -75,7 +82,24 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        Log.w("SignIn", "signInResult:success");
+                        Log.d("SignIn", "signInResult:success");
+
+                        FirebaseFirestore db = FirebaseFirestore.getInstance();
+                        CollectionReference uData = db.collection("users");
+                        uData.document(mAuth.getCurrentUser().getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                if (task.getResult().exists()){
+                                    Log.d("SignIn", "Logging in");
+                                }else {
+                                    Map<String, Object> data = new HashMap<>();
+                                    data.put("exist", true);
+                                    db.collection("users").document(mAuth.getCurrentUser().getUid()).set(data);
+                                    Log.d("SignIn", "Signing up");
+                                }
+                            }
+                        });
+
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
                     }

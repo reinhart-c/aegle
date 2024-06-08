@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/background" />
 
     <TextView
-        android:id="@+id/editSleepTitle"
+        android:id="@+id/editFoodTitle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center_vertical"
@@ -57,7 +57,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Breakfast"
+            android:hint="Breakfast (calories)"
             android:inputType="number"
             android:text="0" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -74,7 +74,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Lunch"
+            android:hint="Lunch (calories)"
             android:inputType="number"
             android:text="0" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -91,7 +91,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Dinner"
+            android:hint="Dinner (calories)"
             android:inputType="number"
             android:text="0" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,7 +108,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Snack"
+            android:hint="Snack (calories)"
             android:inputType="number"
             android:text="0" />
     </com.google.android.material.textfield.TextInputLayout>

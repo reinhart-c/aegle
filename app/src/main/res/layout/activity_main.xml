@@ -80,6 +80,21 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <TextView
+        android:id="@+id/progressTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingBottom="76dp"
+        android:text="Steps"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+    <TextView
         android:id="@+id/progressText"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -190,9 +205,9 @@
             android:text="DDDD"
             android:textColor="#055224"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/calendarButton"
             app:layout_constraintHorizontal_bias="0.407"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/previousDayButton"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -206,9 +221,9 @@
             android:text="DD MMMM YYYY"
             android:textColor="#055224"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/calendarButton"
             app:layout_constraintHorizontal_bias="0.863"
-            app:layout_constraintStart_toEndOf="@+id/imageView3" />
+            app:layout_constraintStart_toEndOf="@+id/previousDayButton" />
 
         <ImageView
             android:id="@+id/nextDayButton"
@@ -221,7 +236,7 @@
             app:srcCompat="@drawable/arrow" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/calendarButton"
             android:layout_width="20dp"
             android:layout_height="0dp"
             android:layout_marginEnd="28dp"
@@ -232,7 +247,7 @@
             app:srcCompat="@drawable/calendar" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/previousDayButton"
             android:layout_width="30dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -298,7 +313,7 @@
             app:layout_constraintTop_toTopOf="@+id/calorieBar" />
 
         <TextView
-            android:id="@+id/editSleepTitle"
+            android:id="@+id/editFoodTitle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="center_vertical"
