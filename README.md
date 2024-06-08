@@ -16,6 +16,4 @@
 
 
 # Note
-- Edit path in local.properties
-- Edit data in res(generated)/values/values.xml
-- Edit string in res/values/string.xml
+Input your firebase client id in res/values/string.xml
