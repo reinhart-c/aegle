@@ -1,18 +1,31 @@
 # Aegle
 
+Aegle is an Android health tracker designed to help users monitor their steps, calorie intake, and sleep patterns, promoting a healthier lifestyle.
 
-# Skills and Tools
-- Java
-- Firebase
+## Features
 
+- **Step Tracking**: Keep track of your daily step count.
+- **Calorie Intake**: Log and monitor your daily calorie consumption.
+- **Sleep Tracking**: Record and analyze your sleep patterns.
 
-# Problem
-In this modern era, unhealthy lifestyles are one of the main causes of the increasing cases of chronic diseases such as diabetes, hypertension and heart disease. Many people do not realize the importance of monitoring their health regularly. Most people also do not have easy access to tools or information that can help them manage their daily health. Therefore, there is a need for a solution that is practical and accessible for everyone to monitor and improve their health.
+## Technologies Used
 
+- **Java**: Core development language for the Android app.
+- **Google Firebase**: Used for secure and scalable data storage.
 
-# Solution
-The main objective of developing Aegle is to provide an effective and easy-to-use tool for people to monitor their health. The app is expected to assist users in raising awareness of the importance of health and to track and analyze personal health data.
+## Setup
 
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/reinhart-c/aegle.git
+   ```
+2. Open the project in Android Studio.
+3. Add your Firebase client ID in `app/src/main/res/values/strings.xml`:
+   ```xml
+   <string name="client_id"></string>
+   ```
+4. Build and run the app on an Android device or emulator.
 
-# Note
-Input your firebase client id in res/values/string.xml
+## Usage
+1. Launch the app on your device.
+2. Begin tracking your steps, calorie intake, and sleep data effortlessly.
